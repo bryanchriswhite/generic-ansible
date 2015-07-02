@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+    rbenv:
+      env: user
+      version: v0.4.0
+      ruby_version: 2.2.2
+  roles:
+    - role: common
+      sudo: true
+

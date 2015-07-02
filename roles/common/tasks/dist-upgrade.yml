@@ -1,0 +1,4 @@
+---
+- name: update apt cache & dist-upgrade
+  apt: update_cache=yes upgrade=dist
+  sudo: true

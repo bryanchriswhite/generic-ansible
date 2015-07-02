@@ -1,0 +1,6 @@
+---
+- include: dist-upgrade.yml
+- include: dependencies.yml
+- include: touch-bash_profile.yml
+- include: node.yml
+- include: bundle.yml

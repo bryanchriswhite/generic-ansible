@@ -1,0 +1,13 @@
+---
+- name: ensure node.js aptitude repo is present
+  apt_repository: repo='ppa:chris-lea/node.js'
+  sudo: true
+- name: ensure nodejs is installed
+  apt: update_cache=yes name=nodejs state=present
+  sudo: true
+- name: ensure phantomjs is installed
+  npm: name=phantomjs global=yes state=present
+  sudo: true
+- name: ensure chromedriver is installed
+  npm: name=chromedriver global=yes production=yes state=present
+  sudo: true

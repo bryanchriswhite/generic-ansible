@@ -1,0 +1,10 @@
+---
+- name: install bundler
+  # can't use `gem` module because it doesn't init rbenv
+  # -l: act as login shell
+  # -c: read command from first non-option arg (i.e. `gem install...`)
+  become_user: vagrant
+  command: bash -lc 'gem install bundler'
+- name: bundle
+  command: bash -lc "cd /vagrant && bundle install"
+  become_user: vagrant

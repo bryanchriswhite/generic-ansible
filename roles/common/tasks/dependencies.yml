@@ -1,0 +1,20 @@
+---
+- name: update aptitude cache
+  apt: update_cache=yes
+  sudo: true
+- name: install depencencies
+  apt: name={{ item }} state=present
+  sudo: true
+  with_items:
+    - git
+    - curl
+    - build-essential
+    - cmake
+    - libcurl4-openssl-dev
+    - libmcrypt-dev
+    - libgtkmm-2.4-dev
+    - libnotify4
+    - libreadline-dev
+    - libffi-dev
+    - graphviz
+    - libsqlite3-dev

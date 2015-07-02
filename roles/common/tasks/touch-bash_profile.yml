@@ -1,0 +1,3 @@
+---
+- name: touch .bash_profile
+  file: path='/home/vagrant/.bash_profile' state=touch mode=0644
